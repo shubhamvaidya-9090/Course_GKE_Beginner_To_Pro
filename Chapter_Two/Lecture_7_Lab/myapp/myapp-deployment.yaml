@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: us-central1-docker.pkg.dev/playground-s-11-fa1a560e/samples/app:blue
+        image: us-central1-docker.pkg.dev/playground-s-11-3dacaaf6/my-repo/app:blue
         ports:
         - containerPort: 8888
 

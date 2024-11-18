@@ -5,7 +5,7 @@ import tornado.web
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         title = "Brocker app"
-        bgcolor = "dodgerblue"
+        bgcolor = "dodgergreen"
         self.render("template.html", title=title, bgcolor=bgcolor)
         print(self.request)
 
