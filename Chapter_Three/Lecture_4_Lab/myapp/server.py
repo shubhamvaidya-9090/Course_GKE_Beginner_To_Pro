@@ -31,8 +31,8 @@ class ProbeHandler(tornado.web.RequestHandler):
 def make_app():
     return tornado.web.Application([
         (r"/", MainHandler),
-        (r"/isalive", ProbeHandler),
-        (r"/isready", ProbeHandler),
+        # (r"/isalive", ProbeHandler),
+        # (r"/isready", ProbeHandler),
     ])
 
 
