@@ -31,20 +31,20 @@ spec:
       #       port: 8888
       #     initialDelaySeconds: 5
       #     periodSeconds: 5
-      # - name: cloudsql-proxy
-      #   image: gcr.io/cloudsql-docker/gce-proxy:1.11
-      #   command: ["/cloud_sql_proxy",
-      #             "-instances=tim-acloud-guru:us-central1:timtestdb=tcp:3306",
-      #             "-credential_file=/secrets/cloudsql/credentials.json"]
-      #   securityContext:
-      #     runAsUser: 2
-      #     allowPrivilegeEscalation: false
-      #   volumeMounts:
-      #     - name: cloudsql-instance-credentials
-      #       mountPath: /secrets/cloudsql
-      #       readOnly: true
-      # volumes:
-      #   - name: cloudsql-instance-credentials
-      #     secret:
-      #       secretName: cloudsql-instance-credentials
+      - name: cloudsql-proxy
+        image: gcr.io/cloudsql-docker/gce-proxy:1.11
+        command: ["/cloud_sql_proxy",
+                  "-instances=playground-s-11-3f75ff3d:us-central1:shubham-db=tcp:3306",
+                  "-credential_file=/secrets/cloudsql/credentials.json"]
+        securityContext:
+          runAsUser: 2
+          allowPrivilegeEscalation: false
+        volumeMounts:
+          - name: cloudsql-instance-credentials
+            mountPath: /secrets/cloudsql
+            readOnly: true
+      volumes:
+        - name: cloudsql-instance-credentials
+          secret:
+            secretName: cloudsql-instance-credentials
 
