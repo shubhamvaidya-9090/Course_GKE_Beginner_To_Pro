@@ -14,7 +14,7 @@ class MainHandler(tornado.web.RequestHandler):
 class ProbeHandler(tornado.web.RequestHandler):
     def get(self):
         try:
-            db = pymysql.connect('localhost', 'myapp', 'password', 'myapp')
+            db = pymysql.connect('localhost', 'myapp', 'NOTpassword', 'myapp-db')
             cursor = db.cursor()
             cursor.execute("SELECT VERSION()")
             result = cursor.fetchone()
@@ -31,7 +31,7 @@ class ProbeHandler(tornado.web.RequestHandler):
 def make_app():
     return tornado.web.Application([
         (r"/", MainHandler),
-        # (r"/isalive", ProbeHandler),
+        (r"/isalive", ProbeHandler),
         # (r"/isready", ProbeHandler),
     ])
 
