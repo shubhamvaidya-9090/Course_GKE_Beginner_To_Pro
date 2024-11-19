@@ -14,7 +14,7 @@ class MainHandler(tornado.web.RequestHandler):
 class ProbeHandler(tornado.web.RequestHandler):
     def get(self):
         try:
-            db = pymysql.connect('localhost', 'myapp', 'NOTpassword', 'myapp-db')
+            db = pymysql.connect('localhost', 'myapp', 'password', 'myapp-db')
             cursor = db.cursor()
             cursor.execute("SELECT VERSION()")
             result = cursor.fetchone()
