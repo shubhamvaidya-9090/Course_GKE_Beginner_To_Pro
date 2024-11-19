@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: us-central1-docker.pkg.dev/playground-s-11-3f75ff3d/sample/app:probes1
+        image: us-central1-docker.pkg.dev/playground-s-11-3f75ff3d/sample/app:probes2
         ports:
         - containerPort: 8888
         livenessProbe:
