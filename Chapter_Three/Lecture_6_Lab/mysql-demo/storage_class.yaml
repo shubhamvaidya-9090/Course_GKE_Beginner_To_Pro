@@ -1,8 +1,10 @@
+
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: my-storage-class
-provisioner: kubernetes.io/aws-ebs  # Change according to your cloud provider
+  name: gcp-standard
+provisioner: kubernetes.io/gce-pd  # GCP Persistent Disk provisioner
 parameters:
-  type: gp2  # Example parameter for AWS EBS
+  type: pd-standard  # Standard disk type (can also use pd-ssd for SSD)
 reclaimPolicy: Delete  # Policy for PV deletion when PVC is deleted
+volumeBindingMode: Immediate  # Bind the volume immediately upon PVC creation
