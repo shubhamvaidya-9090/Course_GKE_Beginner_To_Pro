@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: us-central1-docker.pkg.dev/playground-s-11-a381d87e/sample/myapp:v1
+        image: us-central1-docker.pkg.dev/playground-s-11-a381d87e/sample/myapp:v3
         ports:
         - containerPort: 8888
 
