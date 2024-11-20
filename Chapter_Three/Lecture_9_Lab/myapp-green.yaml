@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: gcr.io/tim-acloud-guru/myapp:v2
+        image: us-central1-docker.pkg.dev/playground-s-11-a381d87e/sample/myapp:v2
         ports:
         - containerPort: 8888
 
