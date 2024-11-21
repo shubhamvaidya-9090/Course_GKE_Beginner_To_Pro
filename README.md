@@ -30,3 +30,14 @@
 
     3. blue/green
     A blue-green deployment strategy involves maintaining two identical environments (blue and green) where only one is live at any given time.
+=======================================================================================================================================
+
+
+Nginx commands
+    1. To add repos
+        helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+    2. install applicatoin
+        helm install nginx-ingress ingress-nginx/ingress-nginx
+    3. TO check what helm had created 
+        helm get manifest nginx-ingress | less
+    4. 
